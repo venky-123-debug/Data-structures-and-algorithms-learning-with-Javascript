@@ -7,13 +7,11 @@ const insertionSort = (arr) => {
   try {
     // Iterate over each element in the array, starting from index 1
     for (let i = 1; i < arr.length; i++) {
-      let j = i
-
       // Shift elements to the right until the current element is in the correct position
-      while (j > 0 && arr[j] < arr[j - 1]) {
+      while (i > 0 && arr[i] < arr[i - 1]) {
         // Swap the current element with the previous one
-        ;[arr[j], arr[j - 1]] = [arr[j - 1], arr[j]]
-        j-- // Move left in the array
+        ;[arr[i], arr[i - 1]] = [arr[i - 1], arr[i]]
+        i-- // Move left in the array
       }
     }
 
