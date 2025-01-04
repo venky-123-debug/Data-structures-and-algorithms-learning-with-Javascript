@@ -87,7 +87,6 @@ class BST {
     }
   }
   // Pre-order traversal - Root -> Left -> Right
-
   preOrder() {
     if (node != null) {
       console.log(node.data)
