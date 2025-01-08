@@ -1,52 +1,37 @@
-const convert = (input) => {
-  let digitMap = {
-    " _ | ||_|   ": "0",
-    "     |  |   ": "1",
-    " _  _||_    ": "2",
-    " _  _| _|   ": "3",
-    "   |_|  |   ": "4",
-    " _ |_  _|   ": "5",
-    " _ |_ |_|   ": "6",
-    " _   |  |   ": "7",
-    " _ |_||_|   ": "8",
-    " _ |_| _|   ": "9",
+let OCRDigits = {
+  " _ | ||_|   ": "0",
+  "     |  |   ": "1",
+  " _  _||_    ": "2",
+  " _  _| _|   ": "3",
+  "   |_|  |   ": "4",
+  " _ |_  _|   ": "5",
+  " _ |_ |_|   ": "6",
+  " _   |  |   ": "7",
+  " _ |_||_|   ": "8",
+  " _ |_| _|   ": "9",
+}
+const convert = (string) => {
+  console.log({ string })
+  let splitString = string.split("\n")
+  console.log({ splitString })
+  let columns = splitString[0].length / 3
+  let rows = splitString.length / 4
+  let result = []
+  for (let i = 0; i < rows; i++) {
+    let numberGroup = ""
+    for (let j = 0; j < columns; j++) {
+      let digit =
+        splitString[i * 4 + 0].substr(j * 3, 3) +
+        splitString[i * 4 + 1].substr(j * 3, 3) +
+        splitString[i * 4 + 2].substr(j * 3, 3) +
+        splitString[i * 4 + 3].substr(j * 3, 3)
+      numberGroup += numberFromOcr(digit)
+    }
+    result.push(numberGroup)
   }
-  console.log({ input })
-  // Process multiple lines if necessary
-  let lines = input.split("\n\n").map((block) => processBlock(block, digitMap))
-
-  return lines.join(",")
+  return result.join(",")
 }
 
-// Validate the size of the input
-function validateInput(input) {
-  let lines = input.split("\n")
-  return lines.length % 4 === 0 && lines.every((line) => line.length % 3 === 0)
+function numberFromOcr(stringDigit) {
+  return OCRDigits[stringDigit] || "?"
 }
-
-// Process a block of numbers
-function processBlock(block, digitMap) {
-  let rows = block.split("\n")
-  let numDigits = rows[0].length / 3
-  console.log({ numDigits })
-
-  let digits = []
-  for (let i = 0; i < numDigits; i++) {
-    let digitStr =
-      rows[0].slice(i * 3, i * 3 + 3) +
-      rows[1].slice(i * 3, i * 3 + 3) +
-      rows[2].slice(i * 3, i * 3 + 3) +
-      rows[3].slice(i * 3, i * 3 + 3)
-    digits.push(digitMap[digitStr] || "?")
-  }
-  console.log(digits.join(""))
-
-  return digits.join("")
-}
-
-let input = `
- _ 
-| |
-|_|
-`
-console.log(convert(input))
