@@ -1,44 +1,39 @@
-// FIFO
 class Queue {
   constructor() {
-    this.items = {}
-    this.frontIndex = 0
-    this.backIndex = 0
+    this.items = [];
   }
 
-  enqueue(item) {
-    this.items[this.backIndex] = item
-    this.backIndex++
-    return item + "inserted"
-
-    //return this.items.push(item)
+  enqueue(element) {
+    this.items.push(element); 
   }
 
   dequeue() {
-    let item = this.items[this.frontIndex]
-    delete this.items[this.frontIndex]
-    this.frontIndex++
-    return item
+    return this.isEmpty() ? "Queue is empty" : this.items.shift();
   }
 
-  get printQueue() {
-    return this.items
-  }
   peek() {
-    return this.items[this.frontIndex]
+    return this.isEmpty() ? "Queue is empty" : this.items[0];
   }
 
   isEmpty() {
-    return this.items.length === 0
+    return this.items.length === 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+
+  print() {
+    console.log(this.items.join(" -> "));
   }
 }
 
-const queue = new Queue()
-console.log(queue.enqueue(7))
-console.log(queue.enqueue(2))
-console.log(queue.enqueue(6))
-console.log(queue.enqueue(4))
-console.log(queue.dequeue())
-console.log(queue.peek())
-let str = queue.printQueue
-console.log(str)
+// Example usage:
+const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.print();
+console.log(queue.dequeue());
+console.log(queue.peek()); 
+console.log(queue.size()); 
