@@ -6,7 +6,7 @@ class Stack {
 
   // to remove top most item in stack
   pop() {
-    if (this.items.length == 0) return "UnderFlow"
+    if (this.isEmpty()) return "UnderFlow"
     return this.items.pop()
   }
 
