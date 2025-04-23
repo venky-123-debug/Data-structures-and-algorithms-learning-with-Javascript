@@ -17,11 +17,3 @@ Description: A divide-and-conquer algorithm that splits the array into smaller s
 Best Case: O(n log n)
 Worst Case: O(n log n)
 Space Complexity: O(n) (due to auxiliary arrays)
-
-## Selection Sort
-
-Description: Repeatedly selects the smallest (or largest) element from the unsorted part of the array and places it in its correct position.
-`Time Complexity:`
-Best Case: O(n²)
-Worst Case: O(n²)
-Space Complexity: O(1)
