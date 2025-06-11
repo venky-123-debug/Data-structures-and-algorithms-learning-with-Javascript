@@ -2,7 +2,7 @@ function dfsGraphIterative(graph, start) {
   const visited = new Set()
   const stack = [start]
   while (stack.length > 0) {
-    const node = stack.pop()
+    const node = stack.pop() // Remove top element like stack
     if (!visited.has(node)) {
       console.log(node) // Process current node
       visited.add(node)

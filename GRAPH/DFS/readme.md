@@ -1,5 +1,5 @@
 **Description**
-This project provides implementations of the Depth-First Search (DFS) algorithm in JavaScript, supporting both recursive and iterative approaches for traversing trees and graphs. DFS is a fundamental graph traversal algorithm that explores as far as possible along each branch before backtracking.
+This project provides implementations of the Depth-First Search (DFS) algorithm in JavaScript, supporting both recursive and iterative approaches for traversing trees and graphs. DFS is a fundamental graph traversal algorithm that explores as far as possible along each branch before backtracking. It uses **stack** for traversal.
 
 **Examples**
 Tree traversal (pre-order, using recursive and iterative methods).
