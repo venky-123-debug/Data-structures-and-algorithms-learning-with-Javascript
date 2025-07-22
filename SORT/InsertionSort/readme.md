@@ -5,3 +5,7 @@ Description: Builds the sorted array one element at a time by inserting each ele
 Best Case: O(n) (when the array is already sorted)
 Worst Case: O(n²)
 Space Complexity: O(1)
+
+# example:
+
+1. Sorting playing cards.
