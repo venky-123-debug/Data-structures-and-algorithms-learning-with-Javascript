@@ -1,7 +1,3 @@
-/**
- * Linked list tutorial from Geeks for Geeks
- */
-
 // Tocreate a new linked List
 class Node {
   constructor(element) {
@@ -47,7 +43,7 @@ class linkedList {
         node.next = this.head
         this.head = node
       } else {
-        curr = this.head
+        // curr = this.head
         let it = 0
         while (it < index) {
           it++
@@ -64,9 +60,7 @@ class linkedList {
   }
 
   removeFrom(index) {
-    if (index < 0 || index >= this.size) {
-      throw new Error("Invalid index")
-    }
+    if (index < 0 || index >= this.size) throw "Invalid index"
 
     let current = this.head
     let previous

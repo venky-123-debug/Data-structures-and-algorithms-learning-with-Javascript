@@ -6,16 +6,32 @@ A **Tree** is a hierarchical, non-linear data structure consisting of nodes. It 
 
 ---
 
+## Types of Tree:
+
+Binary Tree: Each node has at most 2 children.
+Binary Search Tree (BST): Left child < parent < right child.
+AVL Tree: Self-balancing BST.
+Red-Black Tree: BST with balancing rules using colors.
+N-ary Tree: Nodes can have up to N children.
+Trie: Prefix tree for storing strings.
+Heap: Complete binary tree used in priority queues.
+Segment Tree: Used for range queries.
+B-Trees/B+ Trees: Used in databases and file systems.
+
 ## Key Terminology
 
-- **Root**: The topmost node in a tree.
-- **Node**: An individual element of the tree.
-- **Parent**: A node that has one or more children.
-- **Child**: A node descended from a parent node.
-- **Leaf**: A node with no children.
-- **Subtree**: A section of a tree comprising a node and its descendants.
-- **Depth**: Distance from the root node to a given node.
-- **Height**: The number of edges on the longest path from a node to a leaf.
+| Term        | Description                                 |
+| ----------- | ------------------------------------------- |
+| **Node**    | Basic unit of a tree                        |
+| **Root**    | Top-most node (only one root per tree)      |
+| **Child**   | A node that descends from another node      |
+| **Parent**  | A node that has children                    |
+| **Leaf**    | A node with no children                     |
+| **Subtree** | A tree formed by a node and its descendants |
+| **Edge**    | Link between parent and child               |
+| **Depth**   | Length from root to a node                  |
+| **Height**  | Longest path from a node to a leaf          |
+| **Level**   | Depth + 1                                   |
 
 ---
 

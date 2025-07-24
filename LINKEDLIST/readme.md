@@ -1,7 +1,3 @@
-Here’s a **README.md** file for Linked List Data Structure:
-
----
-
 # **Linked List Data Structure 📚**
 
 ## **Introduction**
