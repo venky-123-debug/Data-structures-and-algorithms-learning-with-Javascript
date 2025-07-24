@@ -8,15 +8,15 @@ A **Tree** is a hierarchical, non-linear data structure consisting of nodes. It 
 
 ## Types of Tree:
 
-Binary Tree: Each node has at most 2 children.
-Binary Search Tree (BST): Left child < parent < right child.
-AVL Tree: Self-balancing BST.
-Red-Black Tree: BST with balancing rules using colors.
-N-ary Tree: Nodes can have up to N children.
-Trie: Prefix tree for storing strings.
-Heap: Complete binary tree used in priority queues.
-Segment Tree: Used for range queries.
-B-Trees/B+ Trees: Used in databases and file systems.
+`Binary Tree`: Each node has at most 2 children.
+`Binary Search Tree (BST)`: Left child < parent < right child.
+`AVL Tree`: Self-balancing BST.
+`Red-Black Tree`: BST with balancing rules using colors.
+`N-ary Tree`: Nodes can have up to N children.
+`Trie`: Prefix tree for storing strings.
+`Heap`: Complete binary tree used in priority queues.
+`Segment Tree`: Used for range queries.
+`B-Trees/B+ Trees`: Used in databases and file systems.
 
 ## Key Terminology
 
