@@ -18,6 +18,12 @@ A **Tree** is a hierarchical, non-linear data structure consisting of nodes. It 
 `Segment Tree`: Used for range queries.
 `B-Trees/B+ Trees`: Used in databases and file systems.
 
+## Traverse methods ( DFS )
+
+1. preOrder => root -> l -> R
+2. postOrder => l -> R -> root
+3. inorder => l -> root -> R
+
 ## Key Terminology
 
 | Term        | Description                                 |
